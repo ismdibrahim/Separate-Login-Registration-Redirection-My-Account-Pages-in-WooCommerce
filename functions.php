@@ -88,21 +88,21 @@ function ed_redirect_login_registration_if_logged_in() {
 }
 
 /**
- * Custom Redirect for Registrations @ WooCommerce My Account
+ * Custom Redirect for Registrations to My Account
  */
  
 add_filter( 'woocommerce_registration_redirect', 'ed_customer_register_redirect' );
 function ed_customer_register_redirect( $redirect_url ) {
-   $redirect_url = '/mijn-account/';  // type your my account page url
+   $redirect_url = '/my-account/';  // type your my account page url
    return $redirect_url;
 }
 
 /**
- * Custom Redirect for Logouts @ WooCommerce My Account
+ * Custom Redirect for Logouts to Login Page
  */
  
 add_action( 'wp_logout', 'owp_redirect_after_logout' );
 function owp_redirect_after_logout() {
-         wp_redirect( 'https://bukiboek.nl/login/' ); // type your logout page url
+         wp_redirect( 'https://elysiumdeveloper.com/login/' ); // type your logout page url
          exit();
 }
